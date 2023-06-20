@@ -28,13 +28,15 @@ public class FelineTest {
 
     @Test
     public void checkGetKittensReturnsOne() {
+        int expectedKittensCount = 1;
         int kittensCount = feline.getKittens();
-        assertEquals(1, kittensCount);
+        assertEquals(expectedKittensCount, kittensCount);
     }
 
     @Test
     public void checkGetKittensWithCountReturnsValue() {
+        int expectedKittensCount = 5;
         int kittensCount = feline.getKittens(5);
-        assertEquals(5, kittensCount);
+        assertEquals(expectedKittensCount, kittensCount);
     }
 }

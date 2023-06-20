@@ -3,7 +3,7 @@ package com.example;
 import java.util.List;
 
 public class Lion {
-    boolean hasMane;
+    private boolean hasMane;
     private Feline feline;
 
     public Lion(String sex, Feline feline) throws Exception {
@@ -12,7 +12,7 @@ public class Lion {
         } else if ("Самка".equals(sex)) {
             hasMane = false;
         } else {
-            throw new Exception("Используйте допустимые значения пола животного - самей или самка");
+            throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
         this.feline = feline;
     }
