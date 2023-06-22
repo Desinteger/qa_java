@@ -38,13 +38,15 @@ import org.mockito.MockitoAnnotations;
         }
 
         @Test
-        public void checkDoesHaveManeDeterminesLionSex() throws Exception {
+        public void checkDoesHaveManeDeterminesLionSex() {
+            Lion lion;
             try {
-                Lion lion = new Lion(sex, feline);
-                assertEquals(sex.equals("Самец"), lion.doesHaveMane());
+                lion = new Lion(sex, feline);
             } catch (Exception exception) {
                 fail("Используйте допустимые значения пола животного - самец или самка");
+                return;
             }
+            assertEquals(sex.equals("Самец"), lion.doesHaveMane());
         }
 
         @Test
